@@ -143,10 +143,44 @@
             <div class="content-section">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
+                <div class="row contact-content">
+                    <div class="col col-half contact-info">
+                        <p><i class="ti-location-pin"></i>Chicago, US</p>
+                        <p><i class="ti-mobile"></i>Phone: +00 151515</p>
+                        <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                    </div>
+                    <div class="col col-half contact-form">
+                        <div class="row">
+                            <div class="col col-half">
+                                <input type="text" required name="" placeholder="Name" class="form-control">
+                            </div>
+                            <div class="col col-half">
+                                <input type="email" required name="" placeholder="Email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mt-8">
+                            <div class="col col-full">
+                                <input type="text" name="" required placeholder="Message" class="form-control">
+                            </div>
+                        </div>
+                        <input class="form-sub mt-16" type="submit" value="SEND">
+                    </div>
+                </div>
+            </div>
+            <div class="map-section">
+                <img src="./assets/img/map.jpg" alt="Map">
             </div>
         </div>
         <div id="footer">
-
+            <div class="social-list">
+                <a href="" class = "ti-facebook"><i></i></a>
+                <a href="" class = "ti-instagram"><i></i></a>
+                <a href="" class = "ti-youtube"><i></i></a>
+                <a href="" class = "ti-pinterest"><i></i></a>
+                <a href="" class = "ti-twitter"><i></i></a>
+                <a href="" class = "ti-linkedin"><i></i></a>
+            </div>
+            <p class="copyright">Powered by <a href="#">w3.css</a></p>
         </div>
 
         <div class="modal">
@@ -187,7 +221,7 @@
         const buyBtns = document.querySelectorAll('.js-btn-buy')
         const modal = document.querySelector('.modal')
         const modalContainer = document.querySelector('.modal-container')
-        const modalClose = document.querySelector('.modal-close') 
+        const modalClose = document.querySelector('.modal-close')
 
         function showBuyTickets() {
             modal.classList.add('open')
@@ -201,9 +235,9 @@
             buyBtn.addEventListener('click', showBuyTickets)
         }
 
-        modalClose.addEventListener('click',closeBuyTickets)
-        modal.addEventListener('click',closeBuyTickets)
-        modalContainer.addEventListener('click', function(event) {
+        modalClose.addEventListener('click', closeBuyTickets)
+        modal.addEventListener('click', closeBuyTickets)
+        modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
     </script>
