@@ -69,6 +69,7 @@ html {
     left: 0;
     right: 0;
     z-index: 1;
+    overflow: hidden;
 }
 
 #nav {
@@ -129,10 +130,20 @@ html {
     line-height: 38px;
 }
 
+#header .mobile-menu-btn,
 #header .search-btn {
     float: right;
     line-height: 46px;
     padding: 0 21px;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
 }
 
 #header .search-btn:hover {
@@ -140,6 +151,7 @@ html {
     cursor: pointer;
 }
 
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
     font-size: 20px;
@@ -175,9 +187,12 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     padding: 64px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-heading {
@@ -489,3 +504,21 @@ html {
 
     }
 }
+
+@media (min-width: 1024px) {
+    
+}
+
+@media (min-width: 740px) and (max-width: 1024px) {
+    
+}
+
+@media (max-width: 740px) {
+    #nav > li {
+display: block;
+    }
+    #header .search-btn {
+        display: none;
+    }
+}
+
