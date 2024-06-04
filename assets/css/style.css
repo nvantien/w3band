@@ -69,7 +69,6 @@ html {
     left: 0;
     right: 0;
     z-index: 1;
-    overflow: hidden;
 }
 
 #nav {
@@ -130,6 +129,13 @@ html {
     line-height: 38px;
 }
 
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
 #header .mobile-menu-btn,
 #header .search-btn {
     float: right;
@@ -161,6 +167,7 @@ html {
 #slider {
     margin-top: 46px;
     padding-top: 50%;
+    position: relative;
     background: url('C:/Users/Admin/Documents/Learn/w3band/assets/img/slider/slider1.jpg') top center / cover no-repeat;
 }
 
@@ -505,20 +512,72 @@ html {
     }
 }
 
-@media (min-width: 1024px) {
-    
+@media (min-width: 1024px) {}
+
+@media (max-width: 1023px) {
+
 }
 
-@media (min-width: 740px) and (max-width: 1024px) {
-    
-}
+@media (min-width: 740px) and (max-width: 1024px) {}
 
 @media (max-width: 740px) {
-    #nav > li {
-display: block;
+
+    #header {
+        overflow: hidden;
     }
+
     #header .search-btn {
         display: none;
     }
-}
 
+    #header .mobile-menu-btn {
+        display: block;
+    }
+
+    #nav {
+        display: block;
+    }
+
+    #nav>li {
+        display: block;
+    }
+
+    #nav>li:first-child {
+        display: inline-block;
+    }
+
+    #nav .subnav {
+        position: initial;
+        background-color: #333;
+    }
+
+    #nav .subnav a {
+        color: #fff;
+        padding: 5px 41px;
+    }
+
+    #slider .text-content {
+        display: none;
+    }
+
+    #content .mobile-member-item {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    #content .member-img {
+        width: 60%;
+    }
+
+    .s-col-full {
+        width: 100%;
+    }
+
+    .contact-form {
+        margin-top: 14px;
+    }
+
+    .s-mt-8 {
+        margin-top: 8px;
+    }
+}
